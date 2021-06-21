@@ -5,8 +5,8 @@ var current = {
 };
 
 function setup() {
-   createCanvas(windowWidth, windowHeight);
-   //createCanvas(500, 300);
+   //createCanvas(windowWidth, windowHeight);
+   createCanvas(500, 300);
   }
   
   
