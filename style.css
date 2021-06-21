@@ -1,0 +1,47 @@
+#me{
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+#me video{
+    position: relative !important;
+}
+#remote-container{
+    display: flex;
+}
+#remote-container video{
+    height: auto;
+    position: relative !important;
+}
+
+#grid {
+    display: grid;
+    background-color: rgb(215, 236, 195);
+    padding: 10px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    grid-template-columns: 200px auto;
+    grid-template-rows: 160px 160px;
+}
+.grid-item {
+    background-color: white;
+    font-size: 20px;
+    padding: auto;
+}
+
+
+#container1 {
+    display: flex;
+    flex-wrap: wrap;
+}
+#container1 > div {
+    background-color: bisque;
+    width: 200px;
+    height: 200px;
+    padding: 5px;
+    margin: 4px;
+    font-family: cursive, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 5px;
+}
