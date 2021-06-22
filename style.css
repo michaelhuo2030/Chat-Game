@@ -1,3 +1,28 @@
+#color-picker {
+    text-align: center;
+    position: fixed;
+    padding-left: 0 !important;
+    right: 10px;
+    bottom: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 35px;
+    border: 5px solid white;
+
+}
+
+#weight-slider {
+    position: fixed;
+    right: -95px;
+    bottom: 70px;
+    width: 150px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+
 #me{
     position: relative;
     width: 100%;

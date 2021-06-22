@@ -39,7 +39,7 @@ client.init("96285d4f842c4532b5de6c5f04ce4455", function() {
 // Join a channel
 //client.join("00696285d4f842c4532b5de6c5f04ce4455IABTjrFBmo+OYcBW9EmDKJGPeHLP8oY2iBtevuAjiMEcfM4pZagAAAAAEACX33iMRqnRYAEAAQBGqdFg", "p5_agora", null, (uid)=>{
 
-client.join("00696285d4f842c4532b5de6c5f04ce4455IACvlBi4YFfGtOyeEKRu0dcoDu6rQMDmWoPjOrjgSH6ayir4c20AAAAAEACX33iMk1/RYAEAAQCTX9Fg", "test_620", null, (uid)=>{
+client.join("00696285d4f842c4532b5de6c5f04ce4455IACT2W8eWSpqDbbHcQDHBlZdtWXJngN3fR4HyDoKHXfPKCr4c20AAAAAEAAY899J3rbTYAEAAQDettNg", "test_620", null, (uid)=>{
     // Create a local stream
     let localStream = AgoraRTC.createStream({
         audio: true,

@@ -1,12 +1,31 @@
 var socket;
  
 var current = {
+    color: "#34495e",
+    weight: 1,
 
 };
+var pg;
+
+var weightSlider = document.getElementById("weight-slider");
+weightSlider.addEventListener("change", changeWeight, false);
+
+//var colorPicker = document.getElementById("color-picker");
+//colorPicker.addEventListener("change", changeColor, false);
+
+function changeWeight(e) {
+    current.weight = e.target.value;
+}
+
+function changeColor(color){
+    current.color = `#${color}`;
+}
 
 function setup() {
    //createCanvas(windowWidth, windowHeight);
     createCanvas(500, 300);
+  //  pg = createGraphics(500,300);
+    //pg.background(255); //255 white; 0 black
 
     // start socket connection to server
     socket = io.connect("http://localhost:8080");
@@ -20,7 +39,12 @@ function setup() {
         " "+ 
         data.y1);
 
+      //  pg.line(data.x0 * width,data.y0 * height,data.x1 * width,data.y1 * height)
+        stroke(data.color);
+        strokeWeight(data.weight);
         line(data.x0 * width,data.y0 * height,data.x1 * width,data.y1 * height)
+
+
     })
 
 
@@ -28,10 +52,14 @@ function setup() {
   
   
 function draw() {
+  //  image(pg,0,20 );
 }
 
 function drawline(x0,y0,x1,y1){
+    stroke(current.color);
+    strokeWeight(current.weight);
     line(x0,y0,x1,y1);
+
 
     //sending to server
     console.log("sendingmouse: " + x0 + " "+ y0 + " "+ x1 + " "+ y1);
@@ -40,6 +68,8 @@ function drawline(x0,y0,x1,y1){
         y0: y0 / height,
         x1: x1 / width,
         y1: y1 / height,
+        color: current.color,
+        weight: current.weight,
     })
 }
 
