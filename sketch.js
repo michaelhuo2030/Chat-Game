@@ -28,7 +28,15 @@ function setup() {
     //pg.background(255); //255 white; 0 black
 
     // start socket connection to server
-    socket = io.connect("http://localhost:8080");
+    //socket = io.connect("http://localhost:8080");
+    var socket = io({'timeout':5000, 'connect timeout':5000});
+    //check for connections
+
+    if(socket !== undefined){
+        console.log('connected to socket');
+    }
+
+
     socket.on("drawing",(data)=>{
         console.log("Got: " + 
         data.x0 + 
