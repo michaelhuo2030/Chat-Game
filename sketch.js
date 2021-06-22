@@ -29,7 +29,7 @@ function setup() {
 
     // start socket connection to server
     //socket = io.connect("http://localhost:8080");
-    var socket = io({'timeout':5000, 'connect timeout':5000});
+    var socket = io.connect("https://polar-castle-70643.herokuapp.com/")({'timeout':5000, 'connect timeout':5000});
     //check for connections
 
     if(socket !== undefined){
