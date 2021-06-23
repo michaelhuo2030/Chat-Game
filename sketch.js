@@ -1,5 +1,7 @@
 var socket;
-var io = require("socket.io");
+// import { io } from "socket.io-client";
+//const io = require('socket.io-client');
+//var io = require("socket.io-client");
 var current = {
     color: "#34495e",
     weight: 1,
@@ -30,7 +32,9 @@ function setup() {
     // start socket connection to server
     //socket = io.connect("http://localhost:8080");
     //socket = io.connect("https://polar-castle-70643.herokuapp.com/")({'timeout':5000, 'connect timeout':5000});
-    socket = io.connect("https://polar-castle-70643.herokuapp.com/");
+    //socket = io.connect("https://polar-castle-70643.herokuapp.com/");
+    //socket = io("http://localhost:8080");
+    socket = io();
     //check for connections
 
     if(socket !== undefined){
