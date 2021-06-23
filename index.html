@@ -3,38 +3,18 @@
   <head>
     <link  rel="stylesheet" href="style.css">
     <title>Video Call</title>
-
-    <script src="https://cdn.agora.io/sdk/release/AgoraRTCSDK-3.6.0.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-
  </head>
   <body>
 
-    <p>Hello world!!!</p>
-    <h1>Heading!!!</h1>
+    <iframe src="" name="iframe_a" height="180px" width="100%" title="Iframe Example ~ video_conference"></iframe>
+
+    <p><a href="videochat.html" target="iframe_a">click to start video_conference</a></p>
+
+    <iframe src="" name="iframe_b" height="400px" width="100%" title="Iframe ~ draw/play"></iframe>
+
+    <p><a href="draw.html" target="iframe_b">draw_together</a></p>
+    <p><a href="game.html" target="iframe_b">play_together</a></p>
 
 
-
-    <input class="jscolor" id="color-picker" value="#34495e" style = "padding-left = 0px";>
-    <input type="range" id="weight-slider" min="1" max="21" step="4" value="1">
-    <script src="sketch.js"></script>
-
-    <div id="grid">
-      <div class="grid-item">
-          <div id="me"></div>
-      </div>
-
-      <div class="grid-item">
-          <div id="remote-container"></div>
-      </div>
-
-    </div>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.4.0/socket.io.min.js"  crossorigin="anonymous"></script>
-
-    <script src="jscolor.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.3.1/lib/p5.js"></script>
-    <script src="script.js"></script>
-    
   </body>
 </html>

@@ -25,7 +25,7 @@ function changeColor(color){
 
 function setup() {
    //createCanvas(windowWidth, windowHeight);
-    createCanvas(500, 300);
+    createCanvas(windowWidth, 400);
   //  pg = createGraphics(500,300);
     //pg.background(255); //255 white; 0 black
 
@@ -99,5 +99,21 @@ function mouseDragged() {
         current.x = mouseX;
         current.y = mouseY;
     }
+
+}
+
+
+function touchStarted() {
+
+    current.x = mouseX;
+    current.y = mouseY;
+
+}
+
+function touchMoved() {
+
+    drawline(current.x, current.y, mouseX, mouseY);
+    current.x = mouseX;
+    current.y = mouseY;
 
 }

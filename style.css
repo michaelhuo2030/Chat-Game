@@ -34,10 +34,15 @@
 }
 #remote-container{
     display: flex;
+    height: 100%;
+
+
 }
 #remote-container video{
-    height: 200px;
     position: relative !important;
+    height:inherit;
+
+
 }
 
 #grid {
