@@ -1,5 +1,5 @@
 var socket;
- 
+var io = require("socket.io");
 var current = {
     color: "#34495e",
     weight: 1,
