@@ -5,21 +5,23 @@ var socket;
 var current = {
     color: "#34495e",
     weight: 1,
-
 };
 var pg;
 
 var weightSlider = document.getElementById("weight-slider");
 weightSlider.addEventListener("change", changeWeight, false);
 
-//var colorPicker = document.getElementById("color-picker");
-//colorPicker.addEventListener("change", changeColor, false);
+//var colorPicker = document.getElementById("color-picker").jscolor;
+//colorPicker.addEventListener("onchange", changeColor, false);
+
+var myPicker = new JSColor('#color-picker', {format:'rgba'});
+myPicker.option('onChange', changeColor(this.color));
 
 function changeWeight(e) {
     current.weight = e.target.value;
 }
 
-function changeColor(color){
+function changeColor(){
     current.color = `#${color}`;
 }
 
